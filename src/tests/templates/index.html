@@ -1,0 +1,11 @@
+<h1>This is the homepage. It lists all the tests. </h1>
+
+{% if tests %}
+  <ul>
+    {% for t in tests %}
+    <li><a href="{% url 't_detail' t.id %}"</li>{{ t.test_name }}
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No tests are available.</p>
+{% endif %}
